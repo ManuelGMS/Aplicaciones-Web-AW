@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("headers") %>
+</head>
+
+<body>
+
+    <%- include("CabeceraIdentificado") %>
+
+    <main id="cuerpo">
+
+        <div class="tituloSeccion">
+            <h1><%=pregunta.texto%></h1>
+        </div>
+        <form action="/cuestiones/AnadirRespuesta" method="POST">
+            <div class="contenido">
+                <% for(let i = 0 ; i < respuestas.length ; ++i) { %>
+                <div class="respuesta">
+                    <input type="radio" name="respuesta" value="<%=respuestas[i].Id_respuesta%>">
+                    <%=respuestas[i].texto%>
+                </div>
+                <% } %>
+                <div class="respuesta">
+                    <input type="radio" name="respuesta" value="-1" checked>
+                    <input type="hidden" name="Id_pregunta" value="<%=pregunta.Id%>">
+                    Otra:
+                    <input type="text" name="texto" pattern=".*\S+.*" title="El campo no puede quedar vacío.">
+                    <%- include("flash") %>
+                </div>
+                <input type="submit" class="centrarBoton boton" value="Responder">
+            </div>
+        </form>
+
+
+
+    </main>
+
+</body>
+
+</html>

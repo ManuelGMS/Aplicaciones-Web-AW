@@ -1,0 +1,17 @@
+<header id="cabecera">
+    <div id="titulo">
+        <h1>FACEBLUFF</h1>
+    </div>
+    <div id="botonera">
+        <a href="/usuarios/PaginaDePerfilDeUsuario">Perfil</a>
+        <a href="/amigos/PaginaDeAmigosSolicitudesDeAmistad">Amigos</a>
+        <span class="numAmigos"><%=usuario.numAmigos%></span>
+        <a href="/cuestiones/ListadoAleatorioDePreguntas">Preguntas</a>
+        <a href="/mensajeria/mostrarRecepcion">Mensajes</a>
+        <a href="/usuarios/CerrarSesion">Desconectar</a>
+        <div id="puntuacion">
+            <img src="/usuarios/CargarImagenDePerfil/<%=usuario.Id%>">
+            <span><%=usuario.puntos%></span>
+        </div>
+    </div>
+</header>

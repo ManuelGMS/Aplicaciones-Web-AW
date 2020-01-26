@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("headers") %>
+</head>
+
+<body>
+
+    <%- include("CabeceraIdentificado") %>
+
+    <main id="cuerpo">
+
+        <div class="tituloSeccion">
+            <h1>Solicitudes de amistad</h1>
+        </div>
+        <div class="contenido">
+            <% for(let i = 0 ; i < solicitudes.length ; ++i) { %>
+            <div class="filaContenido">
+                <img src="/usuarios/CargarImagenDePerfil/<%=solicitudes[i].Id%>">
+                <span><%=solicitudes[i].nombre%></span>
+            </div>
+            <form action="/amigos/RechazarSolicitud/" method="POST">
+                <input type="submit" class="boton centrarBoton" value="Rechazar">
+                <input type="hidden" name="Id" value="<%=solicitudes[i].Id%>">
+            </form>
+            <form action="/amigos/AceptarSolicitud/" method="POST">
+                <input type="submit" class="boton centrarBoton" value="Aceptar">
+                <input type="hidden" name="Id" value="<%=solicitudes[i].Id%>">
+            </form>
+
+            <% } %>
+
+        </div>
+
+        <div class="tituloSeccion">
+            <h1>Busqueda de amigos</h1>
+        </div>
+        <div class="contenido">
+            <form class="filaContenido" action="/amigos/BusquedaDeUsuarios" method="GET">
+                <label>Buscar por nombre:</label>
+                <input type="text" name="coincidencia">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+
+        <div class="tituloSeccion">
+            <h1>Mis amigos</h1>
+        </div>
+        <div class="contenido">
+            <% for(let i = 0 ; i < amigos.length ; ++i) { %>
+            <div class="filaContenido">
+                <img src="/usuarios/CargarImagenDePerfil/<%=amigos[i].Id%>">
+                <span><%=amigos[i].nombre%></span>
+            </div>
+            <% } %>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

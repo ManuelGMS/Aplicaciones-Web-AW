@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("headers") %>    
+</head>
+
+<body>
+
+    <%- include("CabeceraIdentificado") %>
+
+    <main id="cuerpo">
+        <div class="tituloSeccion">
+            <h1>Preguntas seleccionadas aleatoriamente</h1>
+        </div>
+        <div class="contenido">
+            <% for(let i = 0 ; i < preguntas.length ; ++i) { %>
+                <a class="textoPregunta" href="/cuestiones/MostrarPregunta/<%=preguntas[i].Id%>"><%=preguntas[i].texto%></a>
+            <% } %>
+            <%- include("flash") %>
+        </div> 
+        
+        <div class="tituloSeccion">
+            <h1>!!! Añade tus preguntas !!!</h1>
+        </div>
+        <div>
+            <a href="/cuestiones/CreacionDeNuevaPregunta" class="centrarBoton boton">Crear nueva pregunta</a>
+        </div>
+    </main>
+
+</body>
+
+</html>
