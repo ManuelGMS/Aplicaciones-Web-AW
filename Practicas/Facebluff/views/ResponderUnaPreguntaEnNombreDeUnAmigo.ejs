@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("headers") %>
+</head>
+
+<body>
+
+    <%- include("CabeceraIdentificado") %>
+
+    <main id="cuerpo">
+        <div class="tituloSeccion">
+            <h1><%=pregunta.texto%></h1>
+        </div>
+        <form class="contenido" action="/cuestiones/ComprobarRespuesta" method="POST">
+            <% for(let i = 0 ; i < respuestas.length ; ++i) { %>
+            <div class="respuesta">
+                <input type="radio" name="respuestaId" value="<%=respuestas[i].Id_respuesta%>" checked>
+                <%=respuestas[i].texto%>
+                <span><%respuestas[i].Id_respuesta%></span>
+            </div>
+            <% } %>
+            <input type="hidden" name="amigoId" value="<%=amigo%>">
+            <input type="hidden" name="preguntaId" value="<%=pregunta.Id%>">
+            <button type="submit" class="centrarBoton boton">Responder</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

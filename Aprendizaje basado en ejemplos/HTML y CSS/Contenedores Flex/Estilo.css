@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+/*
+flex-direction: row / column --> Indica el eje principal.
+justify-content --> Disposicion de los elementos a lo largo del eje principal.
+    + flex-start: Elementos agrupados al principio.
+    + flex-end: Elementos agrupados al final.
+    + center: Elementos agrupados en el centro.
+    + space-between
+    + space-evenly 
+    + space-around 
+align-items --> Disposicion de los elementos en el eje secundario.
+    + flex-start: Elementos agrupados al principio.
+    + flex-end: Elementos agrupados al final.
+    + center: Elementos agrupados en el centro.
+    + stretch: Ocupa todo el alto.
+align-self --> Alineacion de UN ELEMENTO respecto al eje secundario.
+    + center
+    + end
+    + start
+*/
+
+/*
+Si los elementos se salen del contenedor se puede especificar la propiedad flex-wrap
+nowrap --> por defecto
+wrap --> salta a la linea siguiente
+*/
+
+.disponerEnFila {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+}
+
+.disponerEnColumna {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+}
+
+.prueba1 {
+    height: 80px;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.item {
+    align-self: center;
+}
+
+.prueba2 {
+    height: 80px;
+}
+
+.unaSolicitud {
+    flex-grow: 1;
+}
+
+.dosSolicitudes {
+    flex-grow: 2;
+}
+
+.tresSolicitudes {
+    flex-grow: 3;
+}
+
+.prueba3 {
+    height: 80px;
+}
+
+.tam100 {
+    flex-basis: 100px;
+}
+
+.tam200 {
+    flex-shrink: 10; /* Para probarlo hay que redimensionar la ventana */
+    flex-basis: 200px;
+}
+
+.tam300 {
+    flex-shrink: 50; /* Para redimensionarlo hay que redimensionar la ventana */
+    flex-basis: 300px;
+}

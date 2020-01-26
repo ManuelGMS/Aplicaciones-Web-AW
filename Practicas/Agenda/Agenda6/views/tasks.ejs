@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de tareas</title>
+    <script src="javascripts/jQuery.js"></script>
+    <script src="javascripts/script.js"></script>
+    <link rel="stylesheet" href="css/Estilo.css">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poller+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div id="titulo">
+            <h1>
+                TAREAS
+            </h1>
+        </div>
+        <div id="infoUsuario">
+            <div id="fotoPerfil">
+                <img src="/imagenUsuario">
+            </div>
+            <div id="infoPerfil">
+                <span class="vertical"><%=userEmail%></span>
+                <a class="vertical" href="/logout">DESCONECTAR</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido">
+        
+        <div id="tareas">
+
+            <% for(let i = 0 ; i < taskList.length ; ++i) { %>
+
+                <% if(taskList[i].done == 0) { %>
+                    <div class="tareaNoFinalizada">
+                        <%=taskList[i].text%>
+                        <% for(let t = 0 ; t < taskList[i].tags.length ; ++t) { %>
+                            <span class="tag"><%=taskList[i].tags[t]%></span>
+                        <%}%>
+                        <a class="marcarFin" href="/finish/<%=taskList[i].id%>">MARCAR FINALIZADA</a>
+                    </div>
+                <% } else { %>
+                    <div class="tareaFinalizada">
+                        <%=taskList[i].text%>
+                    </div>
+                <% } %>
+
+            <% } %>
+
+        </div>
+        
+        <div id="nuevaTarea">
+            <form action="/addTask" method="POST" id="formularioNuevaTarea">
+                <h3> NUEVA TAREA </h3>
+                <div id="nuevaTareaTexto">
+                    <input id="texto" type="text" name="textoTarea" pattern=".*\w{1,}.*" title="La tarea no puede ser vacía." required>
+                </div>
+                <div id="nuevoTag">
+                    <input id="tags" type="hidden" name="tagsTarea">
+                    <input id="textoTag" type="text" pattern="[^@]*" title="El caracter @ no está permitido">
+                    <input id="botonTag" type="button" value="AÑADIR TAG">
+                </div>
+                <div id="mostrarTarea">
+                    &nbsp;
+                </div>
+                <div id="nuevaTareaBoton">
+                    <input type="submit" value="AÑADIR">
+                </div>
+            </form>
+        </div>
+        
+        <div id="estiloBoton">
+            <a href="/deleteCompleted">ELIMINAR TAREAS COMPLETADAS</a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

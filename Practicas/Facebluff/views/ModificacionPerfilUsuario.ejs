@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("headers") %>
+</head>
+
+<body>
+
+    <%- include("CabeceraIdentificado") %>
+
+    <main id="cuerpo">
+
+        <div class="tituloSeccion">
+            <h1>Modificar perfil</h1>
+        </div>
+        <div class="contenido">
+            <form id="formulario" action="/usuarios/GuardarModificacionesPerfil" method="POST"
+                enctype="multipart/form-data">
+                <div>
+                    <label>Contraseña:</label>
+                    <input type="password" name="clave" value="<%=usuario.clave%>" minlength="8" maxlength="50"
+                        required>
+                </div>
+                <div>
+                    <label>Nombre completo:</label>
+                    <input type="text" name="nombre" value="<%=usuario.nombre%>" maxlength="50" required>
+                </div>
+                <div>
+                    <label>Sexo:</label>
+                    <div class="radios">
+                        <span><input type="radio" name="sexo" value="M" <% if(usuario.sexo == "M") { %> checked <% } %>>
+                            Masculino</span>
+                        <span><input type="radio" name="sexo" value="F" <% if(usuario.sexo == "F") { %> checked <% } %>>
+                            Femenino</span>
+                        <span><input type="radio" name="sexo" value="O" <% if(usuario.sexo == "O") { %> checked <% } %>>
+                            Otro</span>
+                    </div>
+                </div>
+                <div>
+                    <label>Fecha de nacimiento:</label>
+                    <% let fechaNacimiento = new Date(usuario.fechaNacimiento); %>
+                    <input type="date" name="fecha"
+                        value="<%=fechaNacimiento.getFullYear() + "-" + (fechaNacimiento.getMonth() + 1) + "-" + fechaNacimiento.getDate()%>"
+                        required>
+                </div>
+                <div>
+                    <label>Imagen de perfil:</label>
+                    <input type="file" name="imagen">
+                    <%- include("flash") %>
+                </div>
+                <div>
+                    <input type="submit" class="centrarBoton boton" value="Confirmar cambios">
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>

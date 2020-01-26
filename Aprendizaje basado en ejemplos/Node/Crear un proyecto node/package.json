@@ -1,0 +1,15 @@
+{
+  "name": "ejemplo",
+  "version": "1.0.0",
+  "description": "Ejemplo",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node inspect main.js"
+  },
+  "keywords": [
+    "ejemplo"
+  ],
+  "author": "Manu",
+  "license": "GPL-3.0"
+}

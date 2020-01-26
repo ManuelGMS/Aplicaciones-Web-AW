@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de tareas</title>
+    <link rel="stylesheet" href="css/Estilo.css">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poller+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div id="titulo">
+            <h1>
+                TAREAS
+            </h1>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <div class="centrar">
+            
+            <div>
+                <h1 class="centrar">Entrar</h1>
+            </div>
+            
+            <form id="formularioDeIdentificacion" action="/login" method="POST">
+                <div>
+                    <label class="etiqueta">Email:</label>
+                    <input type="text" name="correo" pattern="\w+@\w+\.(es|com)" title="El correo ha de ser: correo@servidor.(es/com)" required>
+                </div>
+                <div>
+                    <label class="etiqueta">Contraseña:</label>
+                    <input type="password" name="password" pattern="\w{8,}" title="La contraseña no puede ser vacía ni contener espacios y ha de tener un mínimo de ocho caracteres." required>
+                </div>
+                <div>
+                    <input type="submit" value="ACEPTAR">
+                </div>
+            </form>
+
+            <% if(errorMsg != null) { %>
+            <div id="errorColor">
+                <%=errorMsg%>
+            </div>
+            <% } %>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

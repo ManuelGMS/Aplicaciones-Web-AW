@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+
+    <header></header>
+    
+    <main>
+
+        <!--
+        La ruta ha de ser a un archivo local.
+        <audio src=""></audio>
+        <video src=""></video>
+        -->
+    
+        <!-- La informacion viaja en la URL -->
+        <form action="/nuestraURL" method="get">
+            <div>
+                <label>Nombre: </label>
+                <input type="text" name="nombre" size="30" minlength="8" maxlength="30">
+            </div>
+            <div>
+                <label>Apellidos: </label>
+                <input type="text" name="apellidos" size="30" minlength="8" maxlength="30">
+            </div>
+            <div>
+                <label>Clave: </label>
+                <input type="password" name="clave">
+            </div>
+            <div>
+                <label>Numero: </label>
+                <input type="number" name="numero" min="0" max="10" step="2">
+            </div>
+            <div>
+                <label>Rango: </label>
+                <input type="range" name="rango" min="0" max="10">
+            </div>
+            <div>
+                <label>Fecha: </label>
+                <input type="datetime-local" name="fecha">
+            </div>
+            <div>
+                <label>Color: </label>
+                <input type="color" name="color">
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset">
+                <input type="button" value="Otro">
+            </div>
+        </form>
+
+        <br>
+
+        <!-- La informacion viaja en el cuerpo de la peticion -->
+        <form action="/nuestraURL" method="post">
+            <div>
+               <textarea name="" id="" cols="30" rows="10"></textarea> 
+            </div>
+            <div>
+                <label>Estudiante: </label>
+                <input type="checkbox" name="estudiante" checked>
+                <div>
+                    <div>
+                        <label>Software: </label>
+                        <input type="radio" name="grado" value="software" checked>
+                    </div>
+                    <div>
+                        <label>Computadores: </label>
+                        <input type="radio" name="grado" value="computadores">
+                    </div>
+                    <div>
+                        <label>Sistemas de informacion: </label>
+                        <input type="radio" name="grado" value="sistemasDeInformacion">
+                    </div>
+                    <div>
+                        <label>Computacion: </label>
+                        <input type="radio" name="grado" value="computacion">
+                    </div>
+                </div>
+                <div>
+                    <select name="asignatura">
+                        <option selected="MMI">MMI</option>
+                        <option value="EDA">EDA</option>
+                        <option value="TP">TP</option>
+                        <option value="IS">IS</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset">
+                <input type="button" value="Otro">
+            </div>
+        </form>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>

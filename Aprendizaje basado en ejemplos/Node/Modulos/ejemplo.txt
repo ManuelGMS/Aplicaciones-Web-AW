@@ -1,0 +1,12 @@
+Esta es una prueba de ejemplo del funcionamiento
+del modulo core fs.
+
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.
+Añadido al fichero.

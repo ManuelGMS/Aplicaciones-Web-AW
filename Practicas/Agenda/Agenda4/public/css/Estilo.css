@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+body {
+    background: url("/img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Assistant";
+}
+
+/*******************************************************************************************************/
+
+#encabezado {
+    top: 0;
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    background-color: #FCF3CF;
+}
+
+#titulo {
+    float: left;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 40px;
+    font-family: "Poller One";
+}
+
+#infoUsuario {
+    width: 18%;
+    float: right;
+    margin-right: 40px;
+    margin-top: 25px;
+}
+
+#fotoPerfil {
+    float:left;
+}
+
+#fotoPerfil > img {
+    width: 80px;
+    height: 80px;
+}
+
+#infoPerfil {
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+/*********************************************************************************************************/
+
+#contenido {
+    width: 100%;
+    margin-top: 170px;
+}
+
+#tareas {
+    display: row;
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.tareaNoFinalizada {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: #F39C12;
+    margin-bottom: 10px;
+    border: 2px solid gray; 
+}
+
+.tareaFinalizada {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    background-color: #B7950B;
+}
+
+.tag {
+    margin-left: 5px;
+    padding: 3px;
+    border-radius: 15%;
+    background-color: #229954;
+    border: 2px solid white;
+}
+
+.marcarFin {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    float: right;
+}
+
+#nuevaTarea {
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #0E6655;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: row;
+}
+
+#nuevaTarea {
+    border: 2px solid gray;
+}
+
+#nuevaTareaTexto {
+    width: 80%;
+}
+
+#nuevaTareaBoton {
+    width: 20%;
+}
+
+#nuevaTareaBoton > input {
+    width: 75%;
+    height: 100%;
+    float: right;
+    font-weight: bold;
+}
+
+#nuevaTareaTexto > input {
+    height: 25px;
+    width: 100%;
+}
+
+#estiloBoton {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: bold;
+    background-color: #34495E;
+    border: 2px solid white;
+}
+
+#estiloBoton > a {
+    color:white;
+    text-decoration: none;
+}
+
+/*********************************************************************************************************/
+
+#error404 {
+    color: grey;
+    margin-top: 27%;
+    text-align: center;
+}
+
+#error500 {
+    color: grey;
+    margin-top: 25%;
+    text-align: center;
+}

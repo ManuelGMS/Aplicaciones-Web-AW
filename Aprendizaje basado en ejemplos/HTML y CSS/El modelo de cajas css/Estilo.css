@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+    background-color: skyblue;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#uno {
+    width: 110px;
+    height: 110px;
+    margin: 20px 0px 20px 20px;
+    padding: 10px 10px 10px 10px;
+    border: 4px dashed orangered;
+    background: linear-gradient(to right bottom, yellow, green);
+    font-size: 20px;
+    font-family: "Clicker Script";
+}
+
+#dos {
+    width: 110px;
+    height: 110px;
+    margin: 20px 0px 20px 600px;
+    border: 4px dotted purple;
+    padding: 10px 10px 10px 10px;
+    background: radial-gradient(yellow, green);
+}
+
+#tres {
+    width: 110px;
+    height: 110px;
+    border: 4px solid violet;
+    margin: 20px 0px 20px 300px;
+    padding: 10px 10px 10px 10px;
+    background: rgba(255, 255, 0, 0.3);
+}
+
+#cuatro {
+
+    /*
+    width: 110px;
+    height: 110px;
+    */
+
+    border: 4px solid lime;
+
+    /* arriba, derecha, abajo, izquierda */
+    margin: 20px 0px 20px 1000px;
+    padding: 10px 10px 10px 10px;
+    
+    /* color, imagen, posicion/tamaño, repeat */
+    background: url("uni.jpg") 50% 50%/cover no-repeat;
+    /* background: url("uni.jpg") 50% 50%/50px 50px no-repeat; */
+
+}
+
+.estirar {
+    width: 180px;
+}
+
+.alargar {
+    height: 180px;
+}
+
+.ejemplo , #ejemplo {
+    color: red;
+}
+
+p , span {
+    color: black;
+    background-color: orangered;
+}

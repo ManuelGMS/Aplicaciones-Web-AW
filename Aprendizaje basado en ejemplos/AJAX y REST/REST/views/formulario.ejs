@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Estilo.css">
+    <script src="/scripts/jQuery.js"></script>
+    <script src="/scripts/module.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Obtener usuarios</h1>
+        <form action="/obtenerUsuarios" method="GET">
+            <input type="submit" value="Obtener">
+        </form>
+        <h1>Obtener usuario</h1>
+        <form action="/obtenerUsuario" method="GET">
+            <div>
+                <label>Nombre: </label>
+                <input type="text" name="nombre">
+            </div>
+            <input type="submit" value="Obtener">
+        </form>
+        <h1>Insertar usuario</h1>
+        <form action="/insertarUsuario" method="POST">
+            <div>
+                <label>Nombre: </label>
+                <input type="text" name="nombre">
+            </div>
+            <div>
+                <label>Puntos: </label>
+                <input type="text" name="puntos">
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+        <h1>Modificar usuario</h1>
+        <div>
+            <div>
+                <label>Nombre: </label>
+                <input type="text" id="modifyName" name="nombre">
+            </div>
+            <div>
+                <label>Puntos: </label>
+                <input type="text" id="modifyPoints" name="puntos">
+            </div>
+            <button id="botonModificar">Enviar</button>
+        </div>
+        <h1>Borrar usuario</h1>
+        <div>
+            <div>
+                <label>Nombre: </label>
+                <input type="text" id="deleteName" name="nombre">
+            </div>
+            <button id="botonBorrar">Enviar</button>
+        </div>
+    </main>
+</body>
+</html>

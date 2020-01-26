@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+/* Afecta a todos los elementos con la clase 'verde' */
+.verde {
+    color: green;
+    background-color: greenyellow;
+}
+
+.verde::after {
+    content: ";";
+}
+
+/* Afecta a todos los elementos 'span' con la clase 'verde' */
+div.verde {
+    color: orange;
+    background-color: orangered;
+}
+
+div.verde::before {
+    content: " --> ";
+}
+
+/* 
+Afecta a todos los 'div' contenidos directamente 
+en un 'div' afectado por la clase 'verde' 
+*/
+div.verde > div {
+    color:blue;
+}
+
+/*
+Afecta a todos los 'parrafos' contenidos directa
+o indirectamente en un 'div' afectado por la clase 'verde'
+*/
+div.verde p {
+    color:navy;
+}
+
+/* Afecta a un div a continuacion de un p */
+p + div {
+    color: yellow;
+    background-color: olivedrab;
+}
+
+div.atributo[title^="A"] {
+    color: red;
+}
+
+div.atributo[title*="ode 2"] {
+    color: blue;
+}
+
+div.atributo[title$="3"] {
+    color: green;
+}
+
+div.atributo[title="O Code 4"] {
+    color: yellow;
+}
+
+div.atributo:nth-child(even) {
+    background-color: purple;
+}
+
+div.atributo:nth-child(odd) {
+    background-color: violet;
+}

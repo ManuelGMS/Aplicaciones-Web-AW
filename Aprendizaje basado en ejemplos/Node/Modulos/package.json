@@ -1,0 +1,15 @@
+{
+  "name": "modulos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node inspect main.js"
+  },
+  "author": "Manu",
+  "license": "GPL-",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de tareas</title>
+    <link rel="stylesheet" href="css/Estilo.css">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poller+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <div id="titulo">
+            <h1>
+                TAREAS
+            </h1>
+        </div>
+        <div id="infoUsuario">
+            <div id="fotoPerfil">
+                <img src="img/<%=usuario.img%>" alt="">
+            </div>
+            <div id="infoPerfil">
+                <span class="vertical"><%=usuario.email%></span>
+                <span class="vertical">DESCONECTAR</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="contenido">
+        
+        <div id="tareas">
+
+            <% for(let i = 0 ; i < taskList.length ; ++i) { %>
+
+                <% if(taskList[i].done == 0) { %>
+                    <div class="tareaNoFinalizada">
+                        <%=taskList[i].text%>
+                        <% for(let t = 0 ; t < taskList[i].tags.length ; ++t) { %>
+                            <span class="tag"><%=taskList[i].tags[t]%></span>
+                        <%}%>
+                        <a class="marcarFin" href="/finish/<%=taskList[i].id%>">MARCAR FINALIZADA</a>
+                    </div>
+                <% } else { %>
+                    <div class="tareaFinalizada">
+                        <%=taskList[i].text%>
+                    </div>
+                <% } %>
+
+            <% } %>
+
+        </div>
+        
+        <div id="nuevaTarea">
+            <form action="/addTask" method="POST" id="formulario">
+                <div id="nuevaTareaTexto">
+                    <input type="text" name="tarea" pattern="\s*[^@\s]+.*|.*\s[^@\s]+\s*" title="La descripción de una tarea no puede ser vacía ni empezar y acabar con un tag" required>
+                </div>
+                <div id="nuevaTareaBoton">
+                    <input type="submit" value="Insertar">
+                </div>
+            </form>
+        </div>
+        
+        <div id="estiloBoton">
+            <a href="/deleteCompleted">ELIMINAR TAREAS COMPLETADAS</a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

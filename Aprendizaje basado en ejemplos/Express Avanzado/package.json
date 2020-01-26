@@ -1,0 +1,16 @@
+{
+  "name": "express-avanzado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "",
+    "test": ""
+  },
+  "author": "Manu",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "underscore": "^1.9.2"
+  }
+}

@@ -1,0 +1,36 @@
+BBDD:
+
+Se crea la tabla mensajeria (IdMensaje,IdOrigen,NombreOrigen,IdDestino,Texto,fecha_hora)
+
+CSS:
+
+Al final del CSS se han añadido 2 clases para trabajar mas comodamente.
+(La tercera clase es del ejercicio 3)
+El resto de estilo han sido reutilizados de los ya implementados.
+
+Ejercicio1:
+
++Recepcion:
+
+He creado el router mensajeria, controlador mensajeria y modelo mensajeria.
+Este apartado usa las funciones del routerMensajeria: mostrarRecepcion y borrarRefrescar
+A través de ellas gestiono todo el proceso para mostrar la RECEPCION y hacer el BORRADO de mensajes y
+siguiendo hacia los niveles inferiores puede verse toto el proceso logico.
+
++Envio:
+
+Se reutiliza en el modelo (DAO) de amigos para reutilizar la funcion de buscar amigos.
+Este apartado usa las funciones del routerMensajeria: mostrarEnvioMensajes y enviarRefrescar
+A través de ellas gestiono todo el proceso para mostrar el ENVIO de mensajes, siguiendo 
+hacia los niveles inferiores puede verse toto el proceso logico.
+
+Ejercicio2:
+
+Se modifica la funcion "validarUsuario" que se encuentra en el modeloBasicas, he añadido
+otra query que obtiene el numero de amigos.
+
+Se crea la clase numAmigos al final del CSS
+
+Se añade un span dentro del fichero headers.ejs que permite cargar de forma general y
+comoda las cabeceras en cualquier pagina.
+ 

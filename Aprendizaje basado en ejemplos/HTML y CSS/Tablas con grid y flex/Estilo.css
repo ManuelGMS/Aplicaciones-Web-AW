@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+.tabla {
+    display: grid; /* Contenedor grid */
+    grid-template-rows: 100px 100px 100px; /* 3 Filas y sus respectivos tamaños */
+    grid-template-columns: 200px 200px 200px; /* 3 Columnas y sus respectivos tamaños */
+}
+
+.colspan2 {
+    grid-row: 2 / 3; /* El elemento esta situado en la segunda fila */
+    grid-column: 1 / 3; /* El elemento tiene por ancho el tamaño de la primera y segunda columna */
+}
+
+.rowspan2 {
+    grid-row: 2 / 4; /* El elemento abarca las filas dos y tres */
+    grid-column: 3 / 4; /* El elemento esta situado en la columna tres */
+}
+
+.cellXcenterYcenter {
+    display: flex; /* Contenedor flex */
+    flex-direction: row; /* X es el eje principal, Y el secundario */
+    justify-content: center; /* Establece la disposicion de los elementos en el eje principal */
+    align-items: center; /* Establece la disposicion de los elementos en el eje secundario */
+}
+
+.cellXrightYcenter {
+    display: flex; /* Contenedor flex */
+    flex-direction: row; /* X es el eje principal, Y el secundario */
+    justify-content: flex-end; /* Establece la disposicion de los elementos en el eje principal */
+    align-items: center; /* Establece la disposicion de los elementos en el eje secundario */
+}
+
+.secondaryStart {
+    align-self: flex-start; /* Alinea particularmente a este elemento en el eje secundario */
+}
+
+.secondaryEnd {
+    align-self: flex-end; /* Alinea particularmente a este elemento en el eje secundario */
+}

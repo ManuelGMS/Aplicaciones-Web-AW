@@ -1,0 +1,285 @@
+/******************** PAGINA WEB *******************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url("/img/FondoPrincipal.jpg");
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited , a:active {
+    text-decoration: none;
+}
+
+
+button[type="submit"] {
+    text-decoration: none;
+}
+
+/******************** CABECERA *********************************************************/
+
+/* Comun a toda la web */
+
+#cabecera {
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    height: 185px;
+    background-color: rgba(255, 255, 0, 0.25);
+}
+
+#cabecera > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Comun a toda la web */
+
+#titulo {
+    font-size: 50px;
+    text-align: center;
+    font-family: "Londrina Outline";
+}
+
+/* Comun a toda la web */
+
+#botonera {
+    display: flex;
+    flex-direction: row;
+}
+
+#botonera > a {
+    color:white;
+    margin-left: 10px;
+    font-family: "Chela One";
+    font-size: 30px;
+}
+
+#botonera > a:hover {
+    font-style: italic;
+}
+
+/* Todas las paginas menos: CreacionNuevoUsuario , IdentificacionUsuario */
+
+#puntuacion > img {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+#puntuacion > span {
+    margin-bottom: 45%;
+    margin-top: 45%;
+    font-family: "Arial";
+}
+
+/********** CUERPO *********************************************************************/
+
+/* Comun a toda la web */
+
+#cuerpo {
+    margin-top: 185px;
+    font-family: "Muli";
+}
+
+#cuerpo > div {
+    margin-bottom: 10px;
+}
+
+/* Comun a toda la web */
+
+.tituloSeccion {
+    font-size: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+.tituloSeccion > h1 {
+    font-family: "Dancing Script";
+}
+
+/* Comun a toda la web */
+
+.contenido {
+    padding: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10%;
+}
+
+.contenido a {
+    padding: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contenido > a:hover {
+    color: yellow;
+}
+
+.contenido p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.filaContenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.filaContenido > img {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.filaContenido > a {
+    align-self: center;    
+}
+
+.filaContenido > span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    align-self: center;    
+}
+
+.filaContenido > input {
+    flex-grow: 1;
+}
+
+/* Comun a toda */
+
+.boton {
+    display: block;
+    color: white;
+    background-color: rgba(237, 96, 211, 0.5);
+    border-color: black;
+    text-align: center;
+    width: 30%;
+    font-size: 18px;
+    border-radius: 10%;
+}
+
+.boton:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.centrarBoton {
+    margin-right: 35%;
+    margin-left: 35%;
+}
+
+/* Comun a toda la web */
+
+input[type=text] {
+    font-family: "Roboto";
+    font-size: 15px;
+}
+
+/* Paginas: Responder una pregunta para si mismo y en nombre de  un amigo */
+
+.respuesta {
+    color: white;
+    background-color: rgba(242, 173, 43, 0.5);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+
+.respuesta > input[type=text] {
+    flex-grow: 1;
+}
+
+/* Paginas: Listado aleatorio de preguntas */
+
+.pregunta {
+    color: white;
+    background-color: rgba(119, 17, 139, 0.3);
+}
+
+/* Paginas: Responder una pregutna para si mismo y en nobmre de un amigo */
+
+#formulario {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+#formulario label {
+    width: 25%;
+    display: block;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 5px;
+}
+
+#formulario > div > input {
+    flex-grow: 1;
+}
+
+#formulario > input {
+    margin-left: 40%;
+    margin-right: 45%;
+}
+
+/* Paginas: Pagina de perfil de usuario */
+
+.separadorPerfil {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+/* Paginas: Vista Pregunta */
+
+.acertada {
+    margin-top: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    color: green;
+}
+
+.fallida {
+    margin-top: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+/* Mensajes Flash */
+
+.flash {
+    color: white;
+    font-weight: bold;
+}
+
+/****************************************************************************************/

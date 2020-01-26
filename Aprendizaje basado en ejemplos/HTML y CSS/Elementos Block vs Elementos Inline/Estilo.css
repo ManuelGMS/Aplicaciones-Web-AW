@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+/* 
+BLOCK:
+Ocupan todo el ancho.
+Poseen las propiedades: Alto, ancho, margen superior e inferior.
+*/
+#bk {
+    margin: 40px 40px;
+}
+
+/* 
+INLINE:
++ Ocupan solo el ancho que necesitan.
++ Ignoran las propiedades: Alto, ancho, margen superior e inferior.
+*/
+#ln {
+    margin: 40px 40px;
+}
+
+/*
+INLINE-BLOC:
++ Ocupan solo el ancho que necesitan.
++ Poseen las propiedades: Alto, ancho, margen superior e inferior.
+*/
+#lnbk {
+    display: inline-block;
+}
+
+#md {
+    margin: 40px 40px;
+}
+
+#md > a {
+    display: block;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("headers") %>
+</head>
+
+<body>
+
+    <%- include("CabeceraIdentificado") %>
+
+    <main id="cuerpo">
+        <div class="tituloSeccion">
+            <h1>Añadir nueva pregunta </h1>
+        </div>
+        <div class="contenido">
+            <form id="formulario" action="/cuestiones/InsertarCuestionPreguntaRespuesta" method="POST">
+
+                <div>
+                    <label>Pregunta: </label>
+                    <input type="text" name="pregunta" pattern=".*\S+.*" title="El campo no puede quedar vacío."
+                        required>
+                </div>
+
+                <% for(let i = 0 ; i < 4 ; ++i) { %>
+                <div>
+                    <label>Respuesta <%=i%>: </label>
+                    <input type="text" name="respuesta<%=i%>" pattern=".*\S+.*" title="El campo no puede quedar vacío."
+                        required>
+                </div>
+                <% } %>
+
+                <input type="submit" class="centrarBoton boton" value="Añadir">
+
+            </form>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

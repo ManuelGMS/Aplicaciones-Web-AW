@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background-color: green;
+}
+
+body {
+    height: 100%;
+    background-color: red;
+}
+
+main {
+    height: 100%;
+}
+
+.tabla {
+    padding: 4px;
+}
+
+.cabecera {
+    column-span: all;
+    text-align: center;
+    border-style: solid;
+}
+
+.fila2 {
+    width: 100%;
+    column-gap: 0;
+    column-count: 2;
+}
+
+.fila3 {
+    width: 100%;
+    column-gap: 0;
+    column-count: 3;
+}
+
+.fila5 {
+    width: 100%;
+    column-gap: 0;
+    column-count: 5;
+}
+
+.columna {
+    padding: 4px;
+    height: 100px;
+    overflow-y: auto;
+    border-style: solid;
+}
